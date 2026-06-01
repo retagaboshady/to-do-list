@@ -87,3 +87,14 @@
     border-radius: 30px;
     font-size: 16px;
 }
+
+.delete-mode li{
+    cursor: pointer;
+    position: relative;
+}
+
+.delete-mode li:hover {
+    background: #f8d7da !important;
+    color: #721c24;
+    text-decoration: line-through;
+}
