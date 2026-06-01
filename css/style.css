@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(193, 169, 196);
+    padding: 10px;
+}
+
+.to-do{
+    width: 100%;
+    max-width: 540px;
+    background: rgb(248, 247, 247);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do h1{
+    color: rgb(180, 144, 150);
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-task{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.add-task input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 0;
+    font-size: 16px;
+}
+
+.add-task button{
+    border: none;
+    outline: none;
+    padding: 16px 35px;
+    background: rgb(180, 144, 150);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.2s;
+}
+
+.delete-btn{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    background: red;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    transition: background 0.2s;
+    width: fit-content;
+}
+
+.list-container li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #f9f9f9;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.delete-btn:hover{
+    background: #bd2130;
+}
