@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     background: rgb(193, 169, 196);
     padding: 10px;
 }
 
-.to-do{
+.to-do {
     width: 100%;
     max-width: 540px;
     background: rgb(248, 247, 247);
@@ -21,25 +21,24 @@
     border-radius: 10px;
 }
 
-.to-do h1{
+.to-do h1 {
     color: rgb(180, 144, 150);
-    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.add-task{
+.add-task {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
     overflow: hidden;
+    gap: 5px;
 }
 
-.add-task input{
+.add-task input {
     flex: 1;
     border: none;
     outline: none;
@@ -48,49 +47,43 @@
     font-size: 16px;
 }
 
-.add-task button{
+.add-task button, .delete-btn {
     border: none;
     outline: none;
     padding: 16px 35px;
-    background: rgb(180, 144, 150);
-    color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 30px;
-    transition: background 0.2s;
-}
-
-.delete-btn{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-left: auto;
-    margin-bottom: 20px;
-    border: none;
-    outline: none;
-    padding: 15px 35px;
-    background: red;
-    color: #fff;
-    font-size: 16px;
     font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
     transition: background 0.2s;
-    width: fit-content;
-}
-
-.list-container li {
-    list-style: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background: #f9f9f9;
-    margin-top: 15px;
-    border-radius: 10px;
-    border-radius: 30px;
-    font-size: 15px;
+    justify-content: center;
 }
 
-.delete-btn:hover{
+#add-btn {
+    background: rgb(180, 144, 150);
+    color: #fff;
+}
+
+#add-btn:hover {
+    background: rgb(160, 124, 130);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
     background: #bd2130;
+}
+
+#list-container li {
+    list-style: none;
+    padding: 15px 20px;
+    background: #edeef0;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-size: 16px;
 }
