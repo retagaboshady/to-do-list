@@ -4,6 +4,7 @@ const deleteBtn = document.querySelector(".delete-btn");
 const listContainer = document.getElementById("list-container");
 
 let isDeleteMode = false;
+
 function addTask() {
     if (inputBox.value.trim() === "") {
         alert("You must write something!");
@@ -20,7 +21,6 @@ function addTask() {
     inputBox.value = "";
 }
 
-
 addBtn.addEventListener("click", addTask);
 
 inputBox.addEventListener("keydown", function(e) {
@@ -29,8 +29,9 @@ inputBox.addEventListener("keydown", function(e) {
     }
 });
 
-deleteByn.addEventListener("click", function() {
+deleteBtn.addEventListener("click", function() {
     isDeleteMode = !isDeleteMode;
+    
     if (isDeleteMode) {
         listContainer.classList.add("delete-mode");
         deleteBtn.style.background = "#555";
@@ -46,7 +47,7 @@ listContainer.addEventListener("click", function(e) {
     if (isDeleteMode) {
         const targetLi = e.target.closest("li");
         if (targetLi && listContainer.contains(targetLi)) {
-            targetLi.remove()
+            targetLi.remove();
         }
     }
-})
+});
