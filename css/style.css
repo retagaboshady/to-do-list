@@ -8,22 +8,22 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: rgb(193, 169, 196);
+    background: rgb(206, 195, 207);
     padding: 40px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     align-items: flex-start;
 }
 
 .to-do, .chart-container {
     width: 100%;
     max-width: 550px;
-    background: rgb(248, 247, 247);
+    background: rgb(255, 255, 255);
     padding: 40px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .to-do h1, .chart-container h2 {
