@@ -4,6 +4,10 @@ A very simple To Do List web , you can use it by clicking the live demo
 
 ([Live Demo](https://retagaboshady.github.io/to-do-list/))
 
+## MADE FOR 
+
+* **HORIZONS:**
+
 ## Feature
 
 * ** Easy :** it is very easy without all the complicated functions
