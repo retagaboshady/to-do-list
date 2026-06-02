@@ -7,6 +7,8 @@ A very simple To Do List web , you can use it by clicking the live demo
 ## Feature
 
 * ** Easy :** it is very easy without all the complicated functions
+* **Pie Chart:** to calculate what did you done
+* **Chategory:** to classify your tasks
 
 ## Tech Used
 
@@ -18,8 +20,6 @@ A very simple To Do List web , you can use it by clicking the live demo
 
 ## How To Use
 
-* **first:** open the demo link and the web page will apear
+first open the demo 
 
-* **second:** write a task in the empty box then click add
-
-* **Then:** if u want to delete any task click on the delete botton and then click on the task u want to delete  
+then click in the input button and write your task then  
