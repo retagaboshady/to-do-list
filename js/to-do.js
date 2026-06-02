@@ -71,6 +71,26 @@ function updateChart() {
         <div class="stat-row" style="border-left: 5px solid #fd7e14"><span>Buying Progress:</span> <span>${counts.buying.done} / ${counts.buying.total} finished</span></div>
         <div class="stat-row" style="border-left: 5px solid #6c757d"><span>Other Progress:</span> <span>${counts.other.done} / ${counts.other.total} finished</span></div>
     `;
+    
+    saveData();
+}
+
+function saveData() {
+    localStorage.setItem("todoData", listContainer.innerHTML);
+}
+
+function loadData() {
+    const savedData = localStorage.getItem("todoData");
+    if (savedData) {
+        listContainer.innerHTML = savedData;
+        
+        listContainer.querySelectorAll("li").forEach(li => {
+            const checkbox = li.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+                checkbox.checked = li.classList.contains("checked");
+            }
+        });
+    }
 }
 
 function addTask() {
@@ -154,6 +174,7 @@ listContainer.addEventListener("click", function(e) {
             const newText = prompt("Edit your task:", currentText);
             if (newText !== null && newText.trim() !== "") {
                 e.target.textContent = newText.trim();
+                updateChart();
             }
         }
     }
@@ -168,4 +189,5 @@ listContainer.addEventListener("change", function(e) {
 });
 
 initChart();
+loadData();
 updateChart();
