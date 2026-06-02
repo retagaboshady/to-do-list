@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>To DO List</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         <div class="container">
@@ -17,8 +18,8 @@
                         <option value="Work">Work</option>
                         <option value="Study">Study</option>
                         <option value="Personal">Personal</option>
-                        <option value="other">Other</option>
-                        <option value="Buying-List">Buying List</option>
+                        <option value="Buying">Buying List</option>
+                        <option value="Other">Other</option>
                     </select>
 
                     <button id="add-btn">Add</button>
@@ -29,6 +30,12 @@
                 <ul id="list-container">
                 </ul>
                 
+            </div>
+
+            <div class="chart-container">
+                <h2>Completion Stats</h2>
+                <canvas id="progressChart"></canvas>
+                <div id="chart-stats"></div>
             </div>
         </div>
         <script src="js/to-do.js"></script>
