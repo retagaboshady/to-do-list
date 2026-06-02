@@ -14,7 +14,7 @@
 
 .to-do {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     background: rgb(248, 247, 247);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -34,6 +34,7 @@
     background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
+    overflow: hidden;
     gap: 5px;
 }
 
@@ -45,6 +46,18 @@
     padding: 15px 0;
     font-size: 16px;
     min-width: 50px;
+}
+
+#category-select {
+    border: none;
+    outline: none;
+    background: #e2e3e5;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
 .add-task button, .delete-btn, .edit-btn {
@@ -130,4 +143,34 @@
 
 .edit-mode li span:hover {
     background: #fff3cd;
+}
+
+.category-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+.tag-work {
+    background: #0d6efd;
+}
+
+.tag-study {
+    background: #198754;
+}
+
+.tag-personal {
+    background: #6f42c1;
+}
+
+.tag-other {
+    background: pink;
+}
+
+.tag-buying-list {
+    background: #dc3545;
 }

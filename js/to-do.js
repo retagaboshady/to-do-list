@@ -1,4 +1,5 @@
 const inputBox = document.getElementById("input-box");
+const categorySelect = document.getElementById("category-select");
 const addBtn = document.getElementById("add-btn");
 const editBtn = document.querySelector(".edit-btn");
 const deleteBtn = document.querySelector(".delete-btn");
@@ -20,9 +21,15 @@ function addTask() {
     
     const span = document.createElement("span");
     span.textContent = inputBox.value;
+
+    const tag = document.createElement("span");
+    const selectedCategory = categorySelect.value;
+    tag.textContent = selectedCategory;
+    tag.classList.add("category-tag", `tag-${selectedCategory.toLowerCase()}`);
     
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(tag);
     listContainer.appendChild(li);
     
     inputBox.value = "";
@@ -75,7 +82,7 @@ listContainer.addEventListener("click", function(e) {
             targetLi.remove();
         }
     } else if (isEditMode) {
-        if (e.target.tagName === "SPAN") {
+        if (e.target.tagName === "SPAN" && !e.target.classList.contains("category-tag")) {
             const currentText = e.target.textContent;
             const newText = prompt("Edit your task:", currentText);
             if (newText !== null && newText.trim() !== "") {
