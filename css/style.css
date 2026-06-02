@@ -88,6 +88,18 @@
     font-size: 16px;
 }
 
+#list-container li input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: rgb(180, 144, 150);
+}
+
+#list-container li.checked span {
+    text-decoration: line-through;
+    color: #888;
+}
+
 .delete-mode li{
     cursor: pointer;
     position: relative;

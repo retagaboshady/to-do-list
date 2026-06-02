@@ -12,9 +12,14 @@ function addTask() {
     }
 
     const li = document.createElement("li");
-    const span = document.createElement("span");
     
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    
+    const span = document.createElement("span");
     span.textContent = inputBox.value;
+    
+    li.appendChild(checkbox);
     li.appendChild(span);
     listContainer.appendChild(li);
     
@@ -49,5 +54,12 @@ listContainer.addEventListener("click", function(e) {
         if (targetLi && listContainer.contains(targetLi)) {
             targetLi.remove();
         }
+    }
+});
+
+listContainer.addEventListener("change", function(e) {
+    if (e.target.tagName === "INPUT" && e.target.type === "checkbox") {
+        const li = e.target.parentElement;
+        li.classList.toggle("checked");
     }
 });
