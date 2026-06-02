@@ -1,9 +1,11 @@
 const inputBox = document.getElementById("input-box");
 const addBtn = document.getElementById("add-btn");
+const editBtn = document.querySelector(".edit-btn");
 const deleteBtn = document.querySelector(".delete-btn");
 const listContainer = document.getElementById("list-container");
 
 let isDeleteMode = false;
+let isEditMode = false;
 
 function addTask() {
     if (inputBox.value.trim() === "") {
@@ -35,6 +37,7 @@ inputBox.addEventListener("keydown", function(e) {
 });
 
 deleteBtn.addEventListener("click", function() {
+    if (isEditMode) return;
     isDeleteMode = !isDeleteMode;
     
     if (isDeleteMode) {
@@ -48,11 +51,36 @@ deleteBtn.addEventListener("click", function() {
     }
 });
 
+editBtn.addEventListener("click", function() {
+    if (isDeleteMode) return;
+    isEditMode = !isEditMode;
+    
+    if (isEditMode) {
+        listContainer.classList.add("edit-mode");
+        editBtn.style.background = "#555";
+        editBtn.style.color = "#fff";
+        editBtn.textContent = "Done";
+    } else {
+        listContainer.classList.remove("edit-mode");
+        editBtn.style.background = "#ffc107";
+        editBtn.style.color = "#212529";
+        editBtn.textContent = "Edit";
+    }
+});
+
 listContainer.addEventListener("click", function(e) {
     if (isDeleteMode) {
         const targetLi = e.target.closest("li");
         if (targetLi && listContainer.contains(targetLi)) {
             targetLi.remove();
+        }
+    } else if (isEditMode) {
+        if (e.target.tagName === "SPAN") {
+            const currentText = e.target.textContent;
+            const newText = prompt("Edit your task:", currentText);
+            if (newText !== null && newText.trim() !== "") {
+                e.target.textContent = newText.trim();
+            }
         }
     }
 });

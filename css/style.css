@@ -14,7 +14,7 @@
 
 .to-do {
     width: 100%;
-    max-width: 540px;
+    max-width: 600px;
     background: rgb(248, 247, 247);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -34,7 +34,6 @@
     background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
-    overflow: hidden;
     gap: 5px;
 }
 
@@ -45,12 +44,13 @@
     background: transparent;
     padding: 15px 0;
     font-size: 16px;
+    min-width: 50px;
 }
 
-.add-task button, .delete-btn {
+.add-task button, .delete-btn, .edit-btn {
     border: none;
     outline: none;
-    padding: 16px 35px;
+    padding: 16px 25px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 30px;
@@ -59,6 +59,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 #add-btn {
@@ -68,6 +69,15 @@
 
 #add-btn:hover {
     background: rgb(160, 124, 130);
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #212529;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
 }
 
 .delete-btn {
@@ -86,9 +96,12 @@
     margin-top: 15px;
     border-radius: 30px;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-#list-container li input[type=checkbox] {
+#list-container li input[type="checkbox"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -100,13 +113,21 @@
     color: #888;
 }
 
-.delete-mode li{
+.delete-mode li {
     cursor: pointer;
-    position: relative;
 }
 
 .delete-mode li:hover {
     background: #f8d7da !important;
     color: #721c24;
     text-decoration: line-through;
+}
+
+.edit-mode li span {
+    cursor: pointer;
+    border-bottom: 1px dashed #ffc107;
+}
+
+.edit-mode li span:hover {
+    background: #fff3cd;
 }
